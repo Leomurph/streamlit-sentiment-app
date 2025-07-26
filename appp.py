@@ -42,3 +42,10 @@ if uploaded_file is not None:
 positive_words = df[df['polarity'] == 'positive']['content_tokens_stemmed']
 negative_words = df[df['polarity'] == 'negative']['content_tokens_stemmed']
 
+if 'polarity' in df.columns and 'content_tokens_stemmed' in df.columns:
+    # Lanjut proses analisis
+    positive_words = df[df['polarity'] == 'positive']['content_tokens_stemmed']
+    ...
+else:
+    st.error("File CSV tidak memiliki kolom 'polarity' dan/atau 'content_tokens_stemmed'. Pastikan file sudah diproses.")
+
