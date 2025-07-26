@@ -39,4 +39,6 @@ if uploaded_file is not None:
     st.subheader("☁️ WordCloud Positif & Negatif")
     df['content_tokens_stemmed'] = df['content_tokens_stemmed'].apply(literal_eval)
 
-    positive_words = df[df['polarity'] == ']()_
+positive_words = df[df['polarity'] == 'positive']['content_tokens_stemmed']
+negative_words = df[df['polarity'] == 'negative']['content_tokens_stemmed']
+
