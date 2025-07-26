@@ -2,7 +2,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-!pip install wordcloud
 from wordcloud import WordCloud, STOPWORDS
 from ast import literal_eval
 from collections import Counter
